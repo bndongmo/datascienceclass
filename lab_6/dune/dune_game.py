@@ -189,11 +189,14 @@ class Fedaykin1(BaseActor):
         self.spice_file_map = spice_file_map
         self.order_map = order_map
 
-        # TODO: YOUR CODE GOES HERE
-        pass
+        # Iterate through each spice field and try to destroy it
+        for (i, j) in np.argwhere(spice_loc_map == 1):
+            # Move to spice field location
+            self._ride_sandworm(i, j)
+            # Try to destroy the spice field
+            self._destroy_spice_field()
 
 
-@ray.remote
 class Fedaykin2(BaseActor):
     """
     Fedaykin warrior/actor running on Worker 1 on one of its two CPUs.
@@ -212,11 +215,14 @@ class Fedaykin2(BaseActor):
         self.spice_file_map = spice_file_map
         self.order_map = order_map
 
-        # TODO: YOUR CODE GOES HERE
-        pass
+        # Iterate through each spice field and try to destroy it
+        for (i, j) in np.argwhere(spice_loc_map == 1):
+            # Move to spice field location
+            self._ride_sandworm(i, j)
+            # Try to destroy the spice field
+            self._destroy_spice_field()
 
 
-@ray.remote
 class Fedaykin3(BaseActor):
     """
     Fedaykin warrior running on Worker 2 on one of its two CPUs.
@@ -235,11 +241,14 @@ class Fedaykin3(BaseActor):
         self.spice_file_map = spice_file_map
         self.order_map = order_map
 
-        # TODO: YOUR CODE GOES HERE
-        pass
+        # Iterate through each spice field and try to destroy it
+        for (i, j) in np.argwhere(spice_loc_map == 1):
+            # Move to spice field location
+            self._ride_sandworm(i, j)
+            # Try to destroy the spice field
+            self._destroy_spice_field()
 
 
-@ray.remote
 class Fedaykin4(BaseActor):
     """
     Fedaykin warrior running on Worker 2 on one of its two CPUs.
@@ -258,9 +267,12 @@ class Fedaykin4(BaseActor):
         self.spice_file_map = spice_file_map
         self.order_map = order_map
 
-        # TODO: YOUR CODE GOES HERE
-        pass
-
+        # Iterate through each spice field and try to destroy it
+        for (i, j) in np.argwhere(spice_loc_map == 1):
+            # Move to spice field location
+            self._ride_sandworm(i, j)
+            # Try to destroy the spice field
+            self._destroy_spice_field()
 
 if __name__ == "__main__":
     """
